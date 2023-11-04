@@ -41,7 +41,7 @@ export const CookieTable = ({stores}: {stores: CookieTable[]}) =>(
         <thead>
             <tr>
                 <th></th>
-                {hours.map((hour)=> (
+                {hours.map((hour: string)=> (
                     <th key={hour}>{hour}</th>
                 ))}
                 <th key="_total"> Daily Total</th>
@@ -61,7 +61,7 @@ export const CookieTable = ({stores}: {stores: CookieTable[]}) =>(
         <tfoot>
             <tr>
                 <td></td>
-                {hours.map((hour, idx)=>(
+                {hours.map((hour: string, idx: number)=>(
                     <td key={hour}>
                         {stores.reduce((acc, store)=> acc + store.cookieEachHour[idx],0)}
                     </td>
