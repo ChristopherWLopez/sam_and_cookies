@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { CookieTable, CookieStand } from './components/CookieTable';
+
 
 function App() {
+  const stores: CookieStand[] = [
+    new CookieStand("Seattle", 23, 65, 6.3),
+    new CookieStand("Tokyo", 3, 24, 1.2),
+    new CookieStand("Dubai", 11, 38, 3.7),
+    new CookieStand("Paris", 20, 38, 2.3),
+    new CookieStand("Lima", 2, 16, 4.6),
+
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <>
+      <header> Sam And Cookies</header>
+      <CookieTable stores={stores}/>
+      </>
+  )
 }
 
 export default App;

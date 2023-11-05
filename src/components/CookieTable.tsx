@@ -36,7 +36,7 @@ export class CookieStand {
     }
 }
 
-export const CookieTable = ({stores}: {stores: CookieTable[]}) =>(
+export const CookieTable = ({stores} :{stores:CookieStand[] }) =>(
     <table>
         <thead>
             <tr>
