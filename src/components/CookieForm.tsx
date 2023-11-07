@@ -3,7 +3,13 @@ import { CookieStand } from "./CookieTable";
 
 import React from 'react'
 
-const CookieForm = () => {
+//props is an object 
+//that has a property onAddStore 
+// onAddStore is a type function
+//which has one argument that is type cookieStand
+// and the function returns nothing that is type "void"
+
+const CookieForm = (props: { onAddStore: (store: CookieStand) => void })=>{
 
     const [location, setLocation] = useState('');
     const [minCustomers, setMinCustomers]=useState(0);

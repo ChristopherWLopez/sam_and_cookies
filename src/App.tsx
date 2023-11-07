@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { CookieTable, CookieStand } from './components/CookieTable';
+import CookieForm from './components/CookieForm';
 
 
 function App() {
@@ -12,10 +13,19 @@ function App() {
     new CookieStand("Lima", 2, 16, 4.6),
 
   ];
+
+
   return (
       <>
-      <header> Sam And Cookies</header>
+      <header className='fluid'>
+        <h1>Sam 'n Cookies</h1>  
+      </header>
+      <main className='fluid'>
       <CookieTable stores={stores}/>
+      <CookieForm onAddStore ={(store: CookieStand): void => {
+        console.log(store);
+      }}
+      </main>
       </>
   )
 }
