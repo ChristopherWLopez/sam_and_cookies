@@ -24,7 +24,7 @@ const CookieForm = ({
 
         <form onSubmit={(e: FormEvent<HTMLFormElement>)=>{
             e.preventDefault();
-            const newStore = new CookieStand(location, 24, 34, 6.2);
+            const newStore = new CookieStand(location, minCustomers, maxCustomer, avgCookiePerSale);
             console.log(e);
             onAddStore(newStore);
         }}>
