@@ -21,14 +21,16 @@ const CookieForm = ({
 
   return (
     <div>
+
         <form onSubmit={(e: FormEvent<HTMLFormElement>)=>{
             e.preventDefault();
             const newStore = new CookieStand(location, 24, 34, 6.2);
             console.log(e);
+            onAddStore(newStore);
         }}>
             <label>
                 <input
-                    type="number"
+                    type="text"
                     value={location}
                     onChange={(e:ChangeEvent<HTMLInputElement>)=>{
                         setLocation(e.target.value);
@@ -68,6 +70,7 @@ const CookieForm = ({
         <div>Location: {location}</div>
         <div>Min Customers: {minCustomers}</div>
         <div>Max Customers: {maxCustomer}</div>
+        <div>Avg Cookies per customer: {avgCookiePerSale}</div>
     </div>
   )
 }
