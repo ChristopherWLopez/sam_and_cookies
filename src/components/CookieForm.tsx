@@ -76,3 +76,5 @@ const CookieForm = ({
 }
 
 export default CookieForm
+
+
